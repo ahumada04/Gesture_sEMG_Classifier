@@ -1,0 +1,2 @@
+SMOTE for helping with little availble data
+specifically for palm clasification
