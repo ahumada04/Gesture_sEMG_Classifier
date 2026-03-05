@@ -39,7 +39,7 @@ Set at the top of the notebook:
         - 1.0 is perfect classification.
 - **Confusion Matrix (CM)** is used to view fine grained misclassifications between gestures.
     - 7x7 matrix
-        - 1.0 across diagonal is perfect classification
+        - 100.0 across diagonal is perfect classification
 
 ### Example Confusion Matrix
 <img src="./Example_Confusion_Matrix.png">
