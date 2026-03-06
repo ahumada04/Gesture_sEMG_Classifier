@@ -1,13 +1,13 @@
 # CNN-FANet sEMG Gesture Classifier
 
-CNN with channel attention for classifying 7 hand gestures from 8-channel surface EMG data.
+CNN with channel attention for classifying 6 hand gestures from 8-channel surface EMG data.
 
 ## Dataset
 UCI EMG Data for Gestures: [view here](https://archive.ics.uci.edu/dataset/481/emg+data+for+gestures)
 EMG data collected via sEMG sensors, labeled by their corresponding hand gesture.
 
 ## Gestures
-Rest, Fist, Flexion, Extension, Radial Deviation, Ulnar Deviation, Palm
+Rest, Fist, Flexion, Extension, Radial Deviation, Ulnar Deviation
 
 ## Model
 Two Conv1d layers for feature extraction followed by a channel attention block (FANet-style), then global average pooling and a fully connected classifier. Input shape: `(Batch, 8, WINDOW_SIZE)`.
