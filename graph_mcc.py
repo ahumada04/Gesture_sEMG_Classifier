@@ -54,8 +54,6 @@ def shorten_label(label: str, max_len: int = 24) -> str:
     return label if len(label) <= max_len else label[:max_len - 1] + "…"
 
 
-# ── plotting ─────────────────────────────────────────────────────────────────
-
 def plot_bar_chart(data: dict, title: str = "MCC — Test Scalars", outfile: str = "tb_bar_chart.png"):
     if not data:
         print("No matching scalars found. Check --logdir and --tag.")
@@ -69,7 +67,7 @@ def plot_bar_chart(data: dict, title: str = "MCC — Test Scalars", outfile: str
     fig_width = max(10, n * 0.9)          # grow with number of bars
     fig, ax = plt.subplots(figsize=(fig_width, 6))
 
-    # Color gradient (blue → teal)
+    # Color gradient (blue --> teal)
     colors = plt.cm.Blues_r([0.3 + 0.5 * i / max(n - 1, 1) for i in range(n)])
 
     bars = ax.bar(range(n), values, color=colors, edgecolor="white", linewidth=0.8, zorder=3)
@@ -109,8 +107,6 @@ def plot_bar_chart(data: dict, title: str = "MCC — Test Scalars", outfile: str
     except Exception:
         pass
 
-
-# ── CLI ───────────────────────────────────────────────────────────────────────
 
 def main():
     parser = argparse.ArgumentParser(description="Bar chart of TensorBoard scalars")
