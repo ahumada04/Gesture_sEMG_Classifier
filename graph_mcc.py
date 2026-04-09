@@ -49,7 +49,7 @@ def load_scalars(logdir: str, tag_filter: str = "MCC/Test"):
     return results
 
 
-def shorten_label(label: str, max_len: int = 24) -> str:
+def shorten_label(label: str, max_len: int = 36) -> str:
     """Trim label so x-axis ticks stay readable."""
     return label if len(label) <= max_len else label[:max_len - 1] + "…"
 
@@ -112,7 +112,7 @@ def main():
     parser = argparse.ArgumentParser(description="Bar chart of TensorBoard scalars")
     parser.add_argument("--logdir", default="./logs",
                         help="Root directory that contains your TensorBoard run folders")
-    parser.add_argument("--tag", default="MCC/Test",
+    parser.add_argument("--tag", default="MCC",
                         help="Substring filter for scalar tags (default: 'MCC/Test')")
     parser.add_argument("--title", default="MCC — Test Scalars",
                         help="Chart title")
